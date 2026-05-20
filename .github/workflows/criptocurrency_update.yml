@@ -7,9 +7,12 @@ env:
 on:
   push:
 
+
 permissions:
   contents: write
-
+  repository_dispatch:
+    types:
+      - invocacion_desde:curl
 jobs:
   autoscrape:
     runs-on: macos-latest
